@@ -4,7 +4,7 @@
  
 #### 工程配置
 
-- SpringBootCore：SpringBoot 核心内容
+- start：快速开始一个SpringBoot项目
  
 #### Web开发
 
