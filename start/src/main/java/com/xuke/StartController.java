@@ -20,11 +20,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  @ComponentScan--扫描当前目录下的所有类，所以启动类的位置有特殊要求
  */
 @SpringBootApplication
+/**
+ * 关闭特定的自动配置可以使用exclude参数，参数为class类型，例如：
+ * @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+ */
 public class StartController {
     public static void main(String[] args) {
+        /**
+         * SpringApplication引导启动项目、spring，又启动自动配置的Tomcat服务器
+         * run方法可以接收两个参数，第一个是启动类，第二个是一个数组，也可以在命令行中通过参数传递给第二个参数！
+         */
         SpringApplication.run(StartController.class,args);
         //关闭banner
-        /** SpringApplication app=new SpringApplication(SpringBootCore.class);
+        /** SpringApplication app=new SpringApplication(StartController.class);
          *  app.setShowBanner(false);
          *  app.run(args);
          *
