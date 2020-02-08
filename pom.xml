@@ -5,6 +5,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>start</module>
+		<module>core</module>
 	</modules>
 
 	<parent>
