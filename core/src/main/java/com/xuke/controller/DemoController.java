@@ -1,5 +1,6 @@
 package com.xuke.controller;
 
+import com.xuke.TestService;
 import com.xuke.config.AppSetting;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,9 +15,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     @Autowired
     private AppSetting appSetting;
+    @Autowired
+    TestService testService;
     @RequestMapping("/")
     public String hello(){
 
         return "这个APP的介绍是："+appSetting.getDesc()+",它的大小为："+appSetting.getSize();
+    }
+    @RequestMapping("/testAutoconfiguration")
+    public String testAutoconfiguration(){
+       return testService.say();
+
     }
 }
