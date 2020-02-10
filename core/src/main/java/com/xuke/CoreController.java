@@ -2,6 +2,8 @@ package com.xuke;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
  * @Author: XuKe
@@ -11,7 +13,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CoreController {
     public static void main(String[] args) {
-        SpringApplication.run(CoreController.class,args);
+        //SpringApplication.run(CoreController.class,args);
+        ConfigurableApplicationContext ac = SpringApplication.run(CoreController.class, args);
+        ConfigurableEnvironment environment = ac.getEnvironment();
+        System.out.println("server.port:" + environment.getProperty("server.port"));
+        System.out.println("yaml.server.port:" + environment.getProperty("yaml.server.port"));
     }
 
 }

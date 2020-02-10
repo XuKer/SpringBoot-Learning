@@ -2,3 +2,8 @@ org.springframework.boot.diagnostics.FailureAnalyzer=\
 com.xuke.FailureAnalyzer.IllegalArgumentFailureAnalyzer,\
 com.xuke.FailureAnalyzer.NullPointerFailureAnalyzer
 
+
+org.springframework.boot.env.EnvironmentPostProcessor=\
+com.xuke.EnvironmentORApplicationContext.YamlEnvironmentPostProcessor
+
+

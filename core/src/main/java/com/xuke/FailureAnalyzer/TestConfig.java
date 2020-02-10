@@ -19,6 +19,9 @@ import org.springframework.stereotype.Component;
  *     2.在src/main/resources/META-INF/spring.factories中注册自定义的异常处理类
  */
 
+/**
+ * 当测试自定义加载环境时需将下面错误注释上
+ */
 @Configuration
 public class TestConfig {
     /**
