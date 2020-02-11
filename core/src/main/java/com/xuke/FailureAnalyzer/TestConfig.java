@@ -27,15 +27,15 @@ public class TestConfig {
     /**
      * 测试IllegalArgumentException用，没有捕获该异常，直接报错
      */
-    @Value("${application.name}")
-    private String applicationName;
+//    @Value("${application.name}")
+//    private String applicationName;
 
 
     /**
      * 测试NullPointerFailure异常，没有捕获该异常，直接报错
      */
-     public TestConfig(){
-         String arg=null;
-         System.out.println(arg.toString());
-     }
+//     public TestConfig(){
+//         String arg=null;
+//         System.out.println(arg.toString());
+//     }
 }
