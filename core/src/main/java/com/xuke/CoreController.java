@@ -14,10 +14,10 @@ import org.springframework.core.env.ConfigurableEnvironment;
 public class CoreController {
     public static void main(String[] args) {
         SpringApplication.run(CoreController.class,args);
-      /*  ConfigurableApplicationContext ac = SpringApplication.run(CoreController.class, args);
+        ConfigurableApplicationContext ac = SpringApplication.run(CoreController.class, args);
         ConfigurableEnvironment environment = ac.getEnvironment();
         System.out.println("server.port:" + environment.getProperty("server.port"));
-        System.out.println("yaml.server.port:" + environment.getProperty("yaml.server.port"));*/
+        System.out.println("yaml.server.port:" + environment.getProperty("yaml.server.port"));
     }
 
 }
