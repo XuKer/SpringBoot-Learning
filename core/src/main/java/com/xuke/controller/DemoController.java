@@ -22,6 +22,7 @@ public class DemoController {
 
         return "这个APP的介绍是："+appSetting.getDesc()+",它的大小为："+appSetting.getSize();
     }
+    //测试自动配置
     @RequestMapping("/testAutoconfiguration")
     public String testAutoconfiguration(){
        return testService.say();
